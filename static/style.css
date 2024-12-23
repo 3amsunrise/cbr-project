@@ -1,0 +1,118 @@
+/* Global Medical Theme */
+body.medical-theme {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4faff;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.card-body {
+  background: linear-gradient(135deg, #ffffff, #e9f5fc);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.text-primary {
+  color: #007bff !important;
+}
+
+/* Input Styling */
+.form-control,
+.form-select {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+}
+
+#search-symptom {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.input-group {
+  border-radius: 10px;
+}
+
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Button Styling */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+/* Suggestions Box */
+.suggestion-box {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.suggestion-item:hover {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+
+/* Result Box */
+#result {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text-danger {
+  color: #dc3545 !important;
+}
+
+.text-muted {
+  font-size: 14px;
+}
+
+/* Mobile Friendly Adjustments */
+@media (max-width: 768px) {
+  .btn {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  #search-symptom {
+      font-size: 16px;
+  }
+}
