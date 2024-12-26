@@ -1,4 +1,3 @@
-/* Global Medical Theme */
 body.medical-theme {
   font-family: 'Poppins', sans-serif;
   background-color: #f4faff;
@@ -23,7 +22,6 @@ h1 {
   color: #007bff !important;
 }
 
-/* Input Styling */
 .form-control,
 .form-select {
   border-radius: 10px;
@@ -45,7 +43,7 @@ h1 {
   font-weight: 500;
 }
 
-/* Button Styling */
+
 .btn-success {
   background-color: #28a745;
   border: none;
@@ -61,7 +59,6 @@ h1 {
   border: none;
 }
 
-/* Suggestions Box */
 .suggestion-box {
   position: absolute;
   background: #fff;
@@ -87,7 +84,6 @@ h1 {
   font-weight: bold;
 }
 
-/* Result Box */
 #result {
   background: #ffffff;
   border-radius: 10px;
@@ -105,7 +101,12 @@ h1 {
   font-size: 14px;
 }
 
-/* Mobile Friendly Adjustments */
+footer {
+  padding: 15px 0;
+  background-color: #f4faff;
+  font-size: 14px;
+}
+
 @media (max-width: 768px) {
   .btn {
       font-size: 14px;

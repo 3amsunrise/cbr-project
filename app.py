@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import numpy as np
 import os
-from data.symptoms import symptom_translations  # Import symptom translations
+from data.symptoms import symptom_translations, disease_translations
 
 app = Flask(__name__)
 
@@ -70,7 +70,6 @@ def index():
 @app.route('/result', methods=['POST'])
 def result():
     selected_symptoms = request.json.get('symptoms', [])
-    # Convert back to original symptom names
     original_symptoms = [translated_to_original[symptom] for symptom in selected_symptoms]
     user_case = prepare_case(original_symptoms)
 
@@ -83,7 +82,16 @@ def result():
         return jsonify({'message': 'Tidak ada penyakit dengan kemiripan yang cukup tinggi berdasarkan gejala Anda.'})
 
     sorted_results = sorted(disease_similarities.items(), key=lambda item: item[1], reverse=True)
-    return jsonify({'results': sorted_results})
+    
+    translated_results = [
+        {
+            "disease": f"{disease} ({disease_translations.get(disease, 'Terjemahan tidak tersedia')})",
+            "similarity": similarity
+        }
+        for disease, similarity in sorted_results
+    ]
+
+    return jsonify({'results': translated_results})
 
 if __name__ == '__main__':
     app.run(debug=True)
